@@ -17,3 +17,5 @@ k8s_custom_deploy(
 
 k8s_resource('tanzu-java-web-app', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'carto.run/workload-name': 'tanzu-java-web-app', 'app.kubernetes.io/component': 'run'}])
+
+allow_k8s_contexts('developer-sandbox')
